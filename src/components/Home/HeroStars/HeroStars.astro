@@ -1,0 +1,47 @@
+---
+import "./heroStars.css";
+
+export interface Props {
+  title: string;
+  subtitle: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<div class="heroStars bg-tale-dark h-screen w-full">
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+  <div class="title absolute top-1/2 left-0 right-0 text-slate-50 text-center">
+    <h1 class="text-xl md:text-3xl tracking-widest font-light">
+      {title}
+    </h1>
+    <h2 class="text-md md:text-xl tracking-widest font-extralight">
+      {subtitle}
+    </h2>
+  </div>
+</div>
+
+<style>
+  .heroStars {
+    background: radial-gradient(
+        circle at 50% -60%,
+        rgba(251, 53, 254, 0.4),
+        rgba(29, 31, 35, 0) 61.71%
+      ),
+      radial-gradient(
+        circle at 6.7% 75%,
+        rgba(29, 31, 35, 0.5),
+        rgba(0, 0, 255, 0) 70.71%
+      ),
+      radial-gradient(
+          circle at 50% 155%,
+          rgba(0, 187, 223, 0.5),
+          rgba(0, 255, 0, 0) 65.71%
+        )
+        #1d1f23;
+
+    overflow: hidden;
+  }
+</style>

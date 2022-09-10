@@ -1,0 +1,26 @@
+---
+// Component Imports
+import MainHead from "@components/Layout/MainHead.astro";
+import HeroStars from "@components/Home/HeroStars/HeroStars.astro";
+import Layout from "@components/Layout/Layout.astro";
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<html lang="en">
+  <head>
+    <MainHead
+      title="Claudio Moscoso: Software Engineer and Web Developer"
+      description="Hi! I'm a software engineer and web developer based in Auckland City. I specialize in building web applications and websites using React, and Astro."
+    />
+  </head>
+  <body>
+    <Layout>
+      <header>
+        <HeroStars title="Claudio Moscoso" subtitle="Software Engineer" />
+      </header>
+      <main></main>
+    </Layout>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+---
+import MainHead from "@components/Layout/MainHead.astro";
+import HeroStars from "@components/Home/HeroStars/HeroStars.astro";
+import Layout from "@components/Layout/Layout.astro";
+
+const title = "Not Found:404";
+const subtitle = "Sorry, we couldn't find the page you were looking for.";
+---
+
+<html lang="en">
+  <head>
+    <MainHead title={title} description={subtitle} />
+  </head>
+  <body>
+    <Layout>
+      <header>
+        <HeroStars title={title} subtitle={subtitle} />
+      </header>
+    </Layout>
+  </body>
+</html>

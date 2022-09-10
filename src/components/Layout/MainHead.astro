@@ -1,0 +1,46 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const {
+  title = "Claudio Moscoso: Software Engineer & Web Developer",
+  description = "Hi, I'm Claudio Moscoso, a software engineer and web developer from Chile. I'm passionate about building great software and I'm always looking for new challenges.",
+} = Astro.props;
+---
+
+<meta charset="UTF-8" />
+<meta name="description" property="og:description" content={description} />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+<title>{title}</title>
+
+<link rel="icon" type="image/png" href="/assets/Logo/cm-white.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  body::-webkit-scrollbar {
+    width: 8px; /* width of the entire scrollbar */
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #1d1f23; /* color of the tracking area */
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgb(29, 31, 35);
+    background: linear-gradient(
+      180deg,
+      rgba(29, 31, 35, 0.33657212885154064) 0%,
+      rgba(251, 53, 254, 0.4009978991596639) 50%,
+      rgba(0, 187, 223, 0.700717787114846) 80%
+    ); /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+  }
+</style>
